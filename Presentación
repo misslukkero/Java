@@ -1,0 +1,25 @@
+package org.example;
+
+import org.w3c.dom.ls.LSOutput;
+
+import javax.swing.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+    String nombre;
+    String apellido;
+    int edad;
+    String edadString;
+    nombre = "Daiana";
+    apellido = "Senese";
+    edad = 0;
+    nombre = JOptionPane.showInputDialog( "Ingrese su nombre");
+    apellido = JOptionPane.showInputDialog( "Ingrese su apellido");
+    edadString = JOptionPane.showInputDialog( "Ingrese su edad");
+    edad = Integer.parseInt(edadString);
+        JOptionPane.showMessageDialog( null, "Buen día! " + nombre + " " + apellido);
+        System.out.println("Buen Día!" + nombre + " " + apellido + " su edad es: " + edad);
+    }
+
+}
