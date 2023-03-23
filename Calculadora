@@ -1,0 +1,49 @@
+package org.example;
+
+import javax.swing.*;
+
+public class Calculadora {
+    public static void main(String[] args) {
+
+        //Inicialización
+        
+        double numero1;
+        double numero2;
+        double resultado;
+        String opcionCadena;
+        int opcion;
+        String numero1Cadena;
+        String numero2Cadena;
+        resultado = 0;
+        
+        //Validación
+        
+        numero1Cadena = JOptionPane.showInputDialog(null, "Ingrese un número: ");
+        numero2Cadena = JOptionPane.showInputDialog(null, "Ingrese otro número: ");
+        opcionCadena = JOptionPane.showInputDialog(null, "Seleccione opción: 1 suma \n 2 resta \n 3 multiplicación \n 4 división");
+        numero1 = Double.parseDouble(numero1Cadena);
+        numero2 = Double.parseDouble(numero2Cadena);
+        opcion = Integer.parseInt(opcionCadena);
+
+        //Proceso
+        switch (opcion) {
+               case 1: resultado = (numero1 + numero2);
+                break;
+               case 2: resultado = (numero1 - numero2);
+                break;
+               case 3: resultado = (numero1 * numero2);
+                break;
+               case 4: resultado = (numero1 / numero2);
+                break;
+                }
+                
+        //Impresión
+
+        JOptionPane.showMessageDialog(null,"El resultado de la operación es: " + resultado);
+
+
+
+
+
+    }
+}
